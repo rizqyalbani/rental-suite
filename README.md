@@ -1,6 +1,6 @@
 # Rental Suite
 
-A multi-store rental and accounting system built with Laravel 13 / PHP 8.3. It handles the full life of a rental (booking, payment, pick-up, return) and keeps a double-entry ledger in sync with every money movement. This repository is a generic, anonymised demo: all names, prices and figures are fictional.
+A multi-store rental operations app and ERP-style back office (inventory, stock count, double-entry accounting, reports) built with Laravel 13 / PHP 8.3. It handles the full life of a rental (booking, payment, pick-up, return) and keeps a double-entry ledger in sync with every money movement. This repository is a generic, anonymised demo: all names, prices and figures are fictional.
 
 ## What it shows
 
@@ -25,6 +25,7 @@ Fictional demo data (see `DemoPortfolioSeeder`).
 
 ## Docs
 
+- [Feature catalogue](docs/features.md)
 - [Case study](docs/case-study.md)
 - [Architecture](docs/architecture.md)
 - [Approval workflow](docs/approval-workflow.md)
