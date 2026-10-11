@@ -1,0 +1,1 @@
+<div class="text-center py-8 px-4 text-red-600 text-sm">Could not load rents (network or session). Try refreshing. Developers: start Vite with <span class="font-mono text-xs">npm run dev</span> or build assets with <span class="font-mono text-xs">npm run build</span>.</div>

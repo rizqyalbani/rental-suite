@@ -1,0 +1,1 @@
+<span class="font-semibold text-emerald-900">Ready.</span><span class="text-emerald-900/90"> Showing availability for <strong>__SD__</strong> → <strong>__ED__</strong>. Search or tap a row to add.</span>

@@ -1,0 +1,61 @@
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+server.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.codex
+/.cursor/*
+!/.cursor/mcp.json
+/.mcp.json
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/tests/e2e/.auth/
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+Thumbs.db
+.aider*
+
+# Database dumps & SQL exports (do not commit raw dumps); keep helper/schema SQL tracked
+*.sql
+!/migrate.sql
+!/schema.sql
+!database/schema/sqlite-schema.sql
+!database/sql/hosting-*.sql
+
+# Large local preview assets
+invoice-template-preview*.png
+
+# Archives / oversized artifacts
+*.zip
+*.tar.gz
+*.sql.gz
+*.dump
+
+# Playwright / local test artifacts
+/test-results/
+
+# Local session/work state written by .claude/hooks/session_size.py
+/.claude/work/
+
+/storage/app/private/
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore

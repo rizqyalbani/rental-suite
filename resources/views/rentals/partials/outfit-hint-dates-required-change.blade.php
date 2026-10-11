@@ -1,0 +1,1 @@
+<span class="font-semibold text-amber-900">Dates required.</span><span class="text-amber-900/90"> Set start and end date in Step 1 before adding or changing items—availability uses those dates.</span>

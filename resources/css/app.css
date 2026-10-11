@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /*
+     * Slightly larger root size so all rem-based Tailwind typography and spacing
+     * scale up together (similar to ~one step of browser zoom).
+     */
+    html {
+        font-size: 112.5%;
+    }
+}
+
+@layer components {
+    /* Unified form controls — border only (no shadow) for clear edges */
+    .form-input {
+        @apply rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm;
+        @apply text-sm leading-5;
+        @apply placeholder:text-gray-400;
+        @apply transition-colors;
+        @apply hover:border-gray-400;
+        @apply focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25;
+        @apply focus-visible:border-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/25;
+        @apply disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+    }
+    .form-input-search {
+        @apply rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm;
+        @apply text-sm leading-5;
+        @apply placeholder:text-gray-400;
+        @apply transition-colors;
+        @apply hover:border-gray-400;
+        @apply focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25;
+        @apply focus-visible:border-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/25;
+        @apply disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed;
+    }
+    .form-input-compact {
+        @apply rounded-md border border-gray-300 bg-white px-2 py-1.5 text-gray-900 shadow-sm;
+        @apply text-xs leading-4;
+        @apply placeholder:text-gray-400;
+        @apply transition-colors;
+        @apply hover:border-gray-400;
+        @apply focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25;
+        @apply focus-visible:border-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/25;
+        @apply disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+    }
+    .form-select {
+        @apply rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm cursor-pointer;
+        @apply text-sm leading-5;
+        @apply transition-colors;
+        @apply hover:border-gray-400;
+        @apply focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25;
+        @apply focus-visible:border-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/25;
+        @apply disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+    }
+    .form-textarea {
+        @apply rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm;
+        @apply text-sm leading-6;
+        @apply placeholder:text-gray-400;
+        @apply transition-colors;
+        @apply hover:border-gray-400;
+        @apply focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25;
+        @apply focus-visible:border-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/25;
+        @apply disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed;
+    }
+
+    /** Indeterminate moving bar loader (light track + black sliding segment). */
+    .rental-loading-track {
+        position: relative;
+        height: 0.35rem;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 9999px;
+        background-color: rgb(229 231 235 / 0.95);
+    }
+
+    .rental-loading-stripe {
+        position: absolute;
+        top: 0;
+        left: -40%;
+        width: 40%;
+        height: 100%;
+        border-radius: 9999px;
+        background: linear-gradient(
+            90deg,
+            rgba(17, 24, 39, 0.12) 0%,
+            #111827 35%,
+            #111827 65%,
+            rgba(17, 24, 39, 0.12) 100%
+        );
+        box-shadow:
+            0 0 10px rgba(17, 24, 39, 0.35),
+            0 0 4px rgba(17, 24, 39, 0.2);
+        animation: rental-loading-slide 1.25s ease-in-out infinite;
+    }
+
+    @keyframes rental-loading-slide {
+        0% {
+            left: -45%;
+        }
+        100% {
+            left: 105%;
+        }
+    }
+}
