@@ -82,6 +82,10 @@ Everything below exists in the code (routes, controllers, views) and is covered 
 | Backups | A console command dumps the database; a token-protected endpoint lets a scheduler call it |
 | Debug aids | A bug-trap log sender and a debug clock for local testing only |
 
+## Not included yet
+
+- HR and payroll: there are users and roles, but no employee records, attendance, leave or payroll calculation. Salaries are recorded as an expense by hand.
+
 ## Screenshots
 
 All screenshots use the fictional demo data (`DemoPortfolioSeeder`).
