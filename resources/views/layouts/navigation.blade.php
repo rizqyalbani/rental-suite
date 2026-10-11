@@ -78,6 +78,7 @@
             @endif
             @if($isMgmt)
                 <a id="rentalTourNavUsers" href="{{ route('users.index') }}" class="{{ $linkBase }} {{ request()->routeIs('users.*') ? $linkActive : $linkIdle }}">Users</a>
+                <a href="{{ route('hr.index') }}" class="{{ $linkBase }} {{ request()->routeIs('hr.*') ? $linkActive : $linkIdle }}">HR <span class="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700">Soon</span></a>
             @endif
             <a id="rentalTourNavMyRequests" href="{{ route('my-requests.index') }}" class="{{ $linkBase }} {{ request()->routeIs('my-requests.*') ? $linkActive : $linkIdle }}">My Requests</a>
             @if($mayApproveItemRemoval)
@@ -227,6 +228,7 @@
                 @endif
                 @if($isMgmt)
                     <a href="{{ route('users.index') }}" class="{{ $linkBase }} {{ request()->routeIs('users.*') ? $linkActive : $linkIdle }}">Users</a>
+                    <a href="{{ route('hr.index') }}" class="{{ $linkBase }} {{ request()->routeIs('hr.*') ? $linkActive : $linkIdle }}">HR <span class="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700">Soon</span></a>
                 @endif
                 <a href="{{ route('my-requests.index') }}" class="{{ $linkBase }} {{ request()->routeIs('my-requests.*') ? $linkActive : $linkIdle }}">My Requests</a>
                 @if($mayApproveItemRemoval)

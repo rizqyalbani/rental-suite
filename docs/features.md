@@ -82,9 +82,11 @@ Everything below exists in the code (routes, controllers, views) and is covered 
 | Backups | A console command dumps the database; a token-protected endpoint lets a scheduler call it |
 | Debug aids | A bug-trap log sender and a debug clock for local testing only |
 
-## Not included yet
+## Coming soon: HR
 
-- HR and payroll: there are users and roles, but no employee records, attendance, leave or payroll calculation. Salaries are recorded as an expense by hand.
+HR is not built yet. The app has a read-only "HR — Coming soon" page (management and super admin only) that shows the plan: attendance per store (clock in and out), a monthly attendance recap per store and employee, and a weekly shift roster; overtime tracking and employee documents may follow. Today there are users, roles, store assignment and cashier shifts, but no attendance, leave or payroll calculation, and salaries are recorded as an expense by hand.
+
+![HR coming soon](screenshots/features/hr-coming-soon.png)
 
 ## Screenshots
 

@@ -270,6 +270,9 @@ Route::middleware(['auth', 'set.store'])->group(function () {
     Route::get('/activity-log-panel', [RentalActivityLogController::class, 'panel'])->name('rentals.activity-log.panel');
 
     Route::resource('users', UserController::class)->only(['index', 'store', 'update', 'destroy'])->middleware('role:super_admin,management');
+    // HR is planned but not built: this is a read-only "coming soon" page.
+    Route::view('/hr', 'hr.coming-soon')->middleware('role:super_admin,management')->name('hr.index');
+
     Route::post('/users/{user}/reset-opname-pin', [UserController::class, 'resetOpnamePin'])->name('users.reset-opname-pin')->middleware('role:super_admin,management');
     Route::post('/users/tutorial/exit', [UserController::class, 'tutorialExit'])->name('users.tutorial.exit')->middleware('role:super_admin,management');
     Route::get('/stores', [StoreController::class, 'index'])->name('stores.index')->middleware('role:super_admin,management');
