@@ -81,3 +81,89 @@ Everything below exists in the code (routes, controllers, views) and is covered 
 | Security | Server-side role checks, signed URLs for public documents, CSP report endpoint, token-protected backup endpoint, super-admin-only database explorer |
 | Backups | A console command dumps the database; a token-protected endpoint lets a scheduler call it |
 | Debug aids | A bug-trap log sender and a debug clock for local testing only |
+
+## Screenshots
+
+All screenshots use the fictional demo data (`DemoPortfolioSeeder`).
+
+### Counter
+
+**Rents page** — Approval queue, open shifts and the new-rent form on one page; the list below filters and searches.
+
+![Rents page](screenshots/features/rentals.png)
+
+**Shift closing report** — Totals, discounts and a per-cashier summary for one shift, with PDF download.
+
+![Shift closing report](screenshots/features/shift-report.png)
+
+### Control
+
+**Approval queue** — Requests wait for a different, authorised person to approve or reject.
+
+![Approval queue](screenshots/features/approvals.png)
+
+**Activity log** — Every change, approval decision and shift event, with who did it and when.
+
+![Activity log](screenshots/features/activity-log.png)
+
+### Inventory
+
+**Item inventory** — Add, search and bulk-edit items; status, price, stock and QR export at a glance.
+
+![Item inventory](screenshots/features/outfits.png)
+
+**Public QR status page** — Scanning an item's QR shows availability and stock, with no customer details.
+
+![Public QR status page](screenshots/features/qr-public-page.png)
+
+### Stock and oversight
+
+**Stock count session** — Mark each item Present, Missing or Damaged; unchecked items stay in view until the end.
+
+![Stock count session](screenshots/features/stock-opname-session.png)
+
+**Manager report** — Transactions, gross and net revenue, discounts and overdue fees for a chosen period.
+
+![Manager report](screenshots/features/manager-report.png)
+
+### Accounting
+
+**Expenses** — Record an expense from an account and a payment source; it posts to the ledger at once.
+
+![Expenses](screenshots/features/expenses.png)
+
+**General ledger** — Every journal line by account and date, each with its journal number.
+
+![General ledger](screenshots/features/general-ledger.png)
+
+**Fixed assets** — Purchase price, total depreciation and current book value per asset account.
+
+![Fixed assets](screenshots/features/fixed-assets.png)
+
+**Chart of accounts** — Accounts with type, normal balance and a cash/bank flag; add or edit in place.
+
+![Chart of accounts](screenshots/features/accounts.png)
+
+### Administration
+
+**Stores and staff** — Create stores, set invoice details and choose which users can work in each store.
+
+![Stores and staff](screenshots/features/stores.png)
+
+**Help and guided tours** — Practice guides, release notes and a readiness test, all on separate practice data.
+
+![Help and guided tours](screenshots/features/help.png)
+
+### Reports
+
+**Profit and Loss** — Revenue and expenses for a date range, from the same journal lines as every other report.
+
+![Profit and Loss](screenshots/05-profit-loss.png)
+
+**Balance Sheet** — Assets, liabilities and equity as of a date.
+
+![Balance Sheet](screenshots/06-balance-sheet.png)
+
+**Trial Balance** — Debit and credit totals per account; the two sides must match.
+
+![Trial Balance](screenshots/07-trial-balance.png)

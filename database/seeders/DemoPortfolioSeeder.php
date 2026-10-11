@@ -120,6 +120,21 @@ class DemoPortfolioSeeder extends Seeder
                     $method, $kind, $start->copy()->setTime(10, 0)->toDateTimeString(), $due,
                 );
             }
+
+            // One pending approval so the approvals queue has something to show.
+            \App\Support\RentalFreeRequest::submit($rental->fresh(), $users['supervisor'], 'Service recovery: the customer received a damaged item.', $shifts[0]->id);
+
+            // Back-office examples: capital, expenses, a drawing, a fixed asset with one depreciation.
+            $acc = \App\Models\Account::pluck('id', 'code');
+            $by = $users['accounting']->id;
+            $day = fn (int $ago) => now()->subDays($ago)->toDateString();
+            \App\Support\CashMovementRecorder::record($store->id, $day(10), 'in', $acc['1100'], $acc['3100'], 5000000, 'Owner capital for the month', $by);
+            \App\Support\ExpenseRecorder::record($store->id, $day(8), $acc['5400'], $acc['1100'], 450000, 'Electricity and internet', $by);
+            \App\Support\ExpenseRecorder::record($store->id, $day(6), $acc['5700'], $acc['1100'], 120000, 'Courier for item delivery', $by);
+            \App\Support\ExpenseRecorder::record($store->id, $day(4), $acc['5100'], $acc['1200'], 300000, 'Steaming and repair of 3 items', $by);
+            \App\Support\CashMovementRecorder::record($store->id, $day(2), 'out', $acc['1100'], $acc['3200'], 500000, 'Owner drawing', $by);
+            $asset = \App\Support\FixedAssetRecorder::record($store->id, 'Steam iron set', $acc['1600'], $day(9), 3600000, $acc['1200'], 'Bought for the pressing corner', $by);
+            \App\Support\FixedAssetRecorder::depreciate($asset, $day(1), 100000, 'Monthly depreciation', $by);
         }
 
         StoreContext::set(null);
