@@ -72,3 +72,7 @@ php -d memory_limit=1G vendor/bin/phpunit
 ```
 
 About 600 tests run on in-memory SQLite: rental lifecycle, payments, approvals, shifts, ledger balance, role access, and practice-data isolation.
+
+## License
+
+Copyright (c) 2026 Rizqy Albani. All rights reserved. The code is published as a portfolio sample: you are welcome to read it, but it may not be copied, reused or sold without written permission. See [LICENSE](LICENSE).
