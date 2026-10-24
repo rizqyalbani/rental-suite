@@ -59,3 +59,6 @@ invoice-template-preview*.png
 !/storage/framework/views/.gitignore
 /storage/framework/sessions/*
 !/storage/framework/sessions/.gitignore
+
+# Personal Claude notes (never commit)
+CLAUDE.local.md
