@@ -62,3 +62,4 @@ invoice-template-preview*.png
 
 # Personal Claude notes (never commit)
 CLAUDE.local.md
+/.claude/settings.local.json
